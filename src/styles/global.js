@@ -22,4 +22,7 @@ ul,li{
     list-style:none;
 }
 
+.App{
+    min-height:100vh;
+}
 `;
