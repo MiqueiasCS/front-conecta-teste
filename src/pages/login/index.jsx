@@ -5,8 +5,11 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { HiOutlineMail } from "react-icons/hi";
 import { RiLockPasswordLine } from "react-icons/ri";
+import { useContext } from "react";
+import { AuthContext } from "../../providers";
 
 export const Login = () => {
+  const { setAuth } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const schema = yup.object().shape({
@@ -22,10 +25,14 @@ export const Login = () => {
 
   const handleLogin = (data) => {
     console.log(data);
+    localStorage.setItem("@user", JSON.stringify(data));
+    setAuth(true);
+    navigate("/dashboard");
   };
 
   return (
     <Container>
+      {/* <Navheader /> */}
       <div className="header">
         {/* <img src={logo} alt="logo" className="logo" /> */}
         <p>Faça seu Login aqui!!</p>
