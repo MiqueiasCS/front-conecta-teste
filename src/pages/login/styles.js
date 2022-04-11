@@ -16,7 +16,7 @@ export const Container = styled.div`
 
   > form {
     background-color: #d5e5ee;
-    width: 500px;
+    width: 300px;
     height: 290px;
     margin-top: 30px;
 
@@ -66,7 +66,7 @@ export const Container = styled.div`
 
       input {
         height: 25px;
-        width: 300px;
+        width: 200px;
         border: none;
         padding-left: 5px;
       }
@@ -77,5 +77,20 @@ export const Container = styled.div`
     font-size: 10px;
     color: red;
     padding-right: 8px;
+  }
+
+  @media (min-width: 768px) {
+    > form {
+      width: 500px;
+      height: 290px;
+    }
+
+    .input-field {
+      > div {
+        input {
+          width: 300px;
+        }
+      }
+    }
   }
 `;
