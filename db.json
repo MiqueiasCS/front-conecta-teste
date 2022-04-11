@@ -1,56 +1,58 @@
-[
-  {
-    "isActive": false,
-    "age": 29,
-    "name": "Murphy Chavez",
-    "gender": "male"
-  },
-  {
-    "isActive": false,
-    "age": 22,
-    "name": "Whitfield Francis",
-    "gender": "male"
-  },
-  {
-    "isActive": false,
-    "age": 35,
-    "name": "Tanisha Shields",
-    "gender": "female"
-  },
-  {
-    "isActive": false,
-    "age": 24,
-    "name": "Carey Cruz",
-    "gender": "female"
-  },
-  {
-    "isActive": false,
-    "age": 40,
-    "name": "Floyd Sharp",
-    "gender": "male"
-  },
-  {
-    "isActive": false,
-    "age": 26,
-    "name": "Tia Calhoun",
-    "gender": "female"
-  },
-  {
-    "isActive": false,
-    "age": 26,
-    "name": "Hallie Berger",
-    "gender": "female"
-  },
-  {
-    "isActive": false,
-    "age": 38,
-    "name": "Misty Stewart",
-    "gender": "female"
-  },
-  {
-    "isActive": false,
-    "age": 36,
-    "name": "Sonya Stout",
-    "gender": "female"
-  }
-]
+{
+  "users":[
+    {
+      "isActive": false,
+      "age": 29,
+      "name": "Murphy Chavez",
+      "gender": "male"
+    },
+    {
+      "isActive": false,
+      "age": 22,
+      "name": "Whitfield Francis",
+      "gender": "male"
+    },
+    {
+      "isActive": false,
+      "age": 35,
+      "name": "Tanisha Shields",
+      "gender": "female"
+    },
+    {
+      "isActive": false,
+      "age": 24,
+      "name": "Carey Cruz",
+      "gender": "female"
+    },
+    {
+      "isActive": false,
+      "age": 40,
+      "name": "Floyd Sharp",
+      "gender": "male"
+    },
+    {
+      "isActive": false,
+      "age": 26,
+      "name": "Tia Calhoun",
+      "gender": "female"
+    },
+    {
+      "isActive": false,
+      "age": 26,
+      "name": "Hallie Berger",
+      "gender": "female"
+    },
+    {
+      "isActive": false,
+      "age": 38,
+      "name": "Misty Stewart",
+      "gender": "female"
+    },
+    {
+      "isActive": false,
+      "age": 36,
+      "name": "Sonya Stout",
+      "gender": "female"
+    }
+  ]
+}
