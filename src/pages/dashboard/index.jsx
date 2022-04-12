@@ -5,7 +5,9 @@ import { useNavigate } from "react-router-dom";
 import { BiRightArrow } from "react-icons/bi";
 
 export const Dashboard = () => {
-  const { auth, users } = useContext(AuthContext);
+  const { auth, users, unattendedUsers, returndUsers } =
+    useContext(AuthContext);
+
   const navigate = useNavigate();
 
   const handleClick = (id) => {
@@ -22,12 +24,20 @@ export const Dashboard = () => {
   return (
     <Container>
       <div className="indicators">
-        <div className="calls"></div>
-        <div className="returns"></div>
-        <div className="attended"></div>
+        <div className="calls">
+          <p>Atendimentos</p>
+          <div>
+            {users.length - unattendedUsers.length}/{users.length}
+          </div>
+        </div>
+        <div className="returns">
+          <p>Retornos</p>
+          <div>{returndUsers.length}</div>
+        </div>
+        {/* <div className="attended"></div> */}
       </div>
       <div className="calls-of-the-day">
-        <h2>Atendimentos</h2>
+        <h2>Lista de Pacientes</h2>
         <PatientList>
           {users.map((patient) => (
             <li key={patient.index} onClick={() => handleClick(patient.index)}>
