@@ -55,14 +55,30 @@ export const Container = styled.div`
       margin: 20px 0;
       background-color: #d5e5ee52;
       padding: 20px;
+      text-align: center;
     }
   }
 
   @media (min-width: 1024px) {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+
     .indicators {
-      div {
+      > div {
         height: 160px;
         width: 300px;
+
+        > p {
+          font-size: 26px;
+        }
+      }
+    }
+    .calls,
+    .returns {
+      > div {
+        font-size: 22px;
+        margin-top: 5px;
       }
     }
   }
@@ -98,5 +114,9 @@ export const PatientList = styled.ul`
 
   @media (min-width: 768px) {
     max-width: 800px;
+  }
+
+  @media (min-width: 1024px) {
+    margin: 0 auto;
   }
 `;

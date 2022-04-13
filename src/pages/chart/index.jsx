@@ -2,12 +2,41 @@ import { useEffect, useContext, useState } from "react";
 import { Container } from "./styles";
 import { AuthContext } from "../../providers";
 import { useNavigate, useParams } from "react-router-dom";
+import { EmptyField } from "../../components/emptyField";
+import { FilledField } from "../../components/filledField";
+import { Modal } from "../../components/modal";
 
 export const Chart = () => {
   const { auth, users, setUsers, findPatient } = useContext(AuthContext);
   const [patient, setPatient] = useState({});
+  const [field, setField] = useState("");
+  const [openModal, setOpenModal] = useState(false);
+  const [empty, setEmpty] = useState({
+    subjective: false,
+    objective: false,
+    assessment: false,
+    plan: false,
+  });
+
   const navigate = useNavigate();
   const params = useParams();
+
+  const handleModal = (subject) => {
+    setField(subject);
+    setOpenModal(true);
+  };
+
+  const handleSaveUserData = () => {
+    let newUsersList = users.map((user) => {
+      if (user.index === parseInt(params.id)) {
+        return { ...patient, attended: true };
+      }
+      return user;
+    });
+
+    setUsers(newUsersList);
+    navigate("/dashboard");
+  };
 
   useEffect(() => {
     if (!auth) {
@@ -20,11 +49,11 @@ export const Chart = () => {
       navigate("/dashboard");
     }
     setPatient(user);
-  }, [auth, users]);
+  }, [auth, params.id]);
 
   return (
     <Container>
-      Prontuário do client
+      <h2>Prontuário</h2>
       <div className="info">
         <p>
           <span className="info-field">Paciente: </span>
@@ -39,6 +68,64 @@ export const Chart = () => {
           <span className="info-attribute">{patient.gender}</span>
         </p>
       </div>
+
+      <div className="sections">
+        <div className="subjectiv">
+          <h2>Subjetiva</h2>
+          {empty.subjective ? (
+            <FilledField fieldData={patient.subjective} />
+          ) : (
+            <EmptyField />
+          )}
+
+          <button onClick={() => handleModal("subjective")}>+</button>
+        </div>
+
+        <div className="objectiv">
+          <h2>Objetiva</h2>
+          {empty.objective ? (
+            <FilledField fieldData={patient.objective} />
+          ) : (
+            <EmptyField />
+          )}
+
+          <button onClick={() => handleModal("objective")}>+</button>
+        </div>
+
+        <div className="assessment">
+          <h2>Avaliação</h2>
+          {empty.assessment ? (
+            <FilledField fieldData={patient.assessment} />
+          ) : (
+            <EmptyField />
+          )}
+          <button onClick={() => handleModal("assessment")}>+</button>
+        </div>
+
+        <div className="plan">
+          <h2>Plano</h2>
+          {empty.plan ? (
+            <FilledField fieldData={patient.plan} />
+          ) : (
+            <EmptyField />
+          )}
+          <button onClick={() => handleModal("plan")}>+</button>
+        </div>
+      </div>
+
+      <button className="save-user" onClick={handleSaveUserData}>
+        Salvar
+      </button>
+      {openModal && (
+        <Modal
+          setOpenModal={setOpenModal}
+          patient={patient}
+          setPatient={setPatient}
+          field={field}
+          empty={empty}
+          setEmpty={setEmpty}
+        />
+      )}
     </Container>
   );
 };

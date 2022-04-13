@@ -1,4 +1,4 @@
-import { Navheader } from "./components";
+import { Navheader } from "./components/header";
 import { Pages } from "./routes";
 import GlobalStyle from "./styles/global";
 

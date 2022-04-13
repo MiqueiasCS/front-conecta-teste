@@ -39,7 +39,7 @@ export const Dashboard = () => {
       <div className="calls-of-the-day">
         <h2>Lista de Pacientes</h2>
         <PatientList>
-          {users.map((patient) => (
+          {unattendedUsers.map((patient) => (
             <li key={patient.index} onClick={() => handleClick(patient.index)}>
               {patient.name} <BiRightArrow />
             </li>

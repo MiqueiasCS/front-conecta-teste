@@ -9,9 +9,12 @@ export const AuthProvider = ({ children }) => {
     return logged ? true : false;
   });
   const [users, setUsers] = useState([]);
+  // const [patient, setPatient] = useState({});
 
   const findPatient = (id) => {
     let patient = users.find((user) => user.index === id);
+    // setPatient(patient);
+
     return patient;
   };
 
@@ -49,6 +52,8 @@ export const AuthProvider = ({ children }) => {
         unattendedUsers,
         returndUsers,
         findPatient,
+        // patient,
+        // setPatient,
       }}
     >
       {children}

@@ -2,7 +2,7 @@ import { Container } from "./styles";
 import { Link, useNavigate } from "react-router-dom";
 import { FiLogIn, FiLogOut } from "react-icons/fi";
 import { useContext } from "react";
-import { AuthContext } from "../providers";
+import { AuthContext } from "../../providers";
 
 export const Navheader = () => {
   const { auth, setAuth } = useContext(AuthContext);
