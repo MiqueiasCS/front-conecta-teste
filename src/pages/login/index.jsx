@@ -36,51 +36,55 @@ export const Login = () => {
         <p>Faça seu Login aqui!!</p>
       </div>
 
-      <form onSubmit={handleSubmit(handleLogin)}>
-        <div className="input">
-          <div className="input-field">
-            <label>
-              Email
-              {errors.email && (
-                <span className="text-error"> -- {errors.email.message}</span>
-              )}
-            </label>
+      <div className="form-entry">
+        <form onSubmit={handleSubmit(handleLogin)}>
+          <div className="input">
+            <div className="input-field">
+              <label>
+                Email
+                {errors.email && (
+                  <span className="text-error"> -- {errors.email.message}</span>
+                )}
+              </label>
 
-            <div>
-              <HiOutlineMail />
-              <input
-                type="text"
-                placeholder="Digite seu Email..."
-                {...register("email")}
-              />
+              <div>
+                <HiOutlineMail />
+                <input
+                  type="text"
+                  placeholder="Digite seu Email..."
+                  {...register("email")}
+                />
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="input">
-          <div className="input-field">
-            <label>
-              Senha
-              {errors.password && (
-                <span className="text-error">
-                  {" "}
-                  -- {errors.password.message}
-                </span>
-              )}
-            </label>
+          <div className="input">
+            <div className="input-field">
+              <label>
+                Senha
+                {errors.password && (
+                  <span className="text-error">
+                    {" "}
+                    -- {errors.password.message}
+                  </span>
+                )}
+              </label>
 
-            <div>
-              <RiLockPasswordLine />
-              <input
-                type="password"
-                placeholder="Digite sua Senha..."
-                {...register("password")}
-              />
+              <div>
+                <RiLockPasswordLine />
+                <input
+                  type="password"
+                  placeholder="Digite sua Senha..."
+                  {...register("password")}
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <button type="submit">Entrar</button>
-      </form>
+          <button type="submit">Entrar</button>
+        </form>
+
+        <div className="image-bg"></div>
+      </div>
     </Container>
   );
 };
