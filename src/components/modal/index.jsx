@@ -81,7 +81,7 @@ export const Modal = ({
         <form onSubmit={handleSubmit(handleForm)}>
           <div className="input-checkbox">
             <input id="active" type="checkbox" {...register("situation")} />
-            <label htmlFor="active">Ativa</label>
+            <label htmlFor="active">Situação Ativa</label>
           </div>
 
           <textarea placeholder="observações" {...register("observations")} />

@@ -45,6 +45,7 @@ export const ContainerChild = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 30px;
 
     > input {
       width: 210px;

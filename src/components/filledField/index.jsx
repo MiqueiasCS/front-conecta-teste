@@ -24,7 +24,7 @@ export const FilledField = ({ fieldData }) => {
       <p>
         <span className="title">Observações: </span>
       </p>
-      <p>{fieldData[0].observations}</p>
+      <p className="obs">{fieldData[0].observations}</p>
     </Container>
   );
 };

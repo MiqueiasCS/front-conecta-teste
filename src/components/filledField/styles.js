@@ -7,7 +7,7 @@ export const Container = styled.div`
 
   p {
     width: 100%;
-    margin: 5px 0;
+    margin: 10px 0;
 
     .title {
       color: #545454;
@@ -24,6 +24,10 @@ export const Container = styled.div`
       align-items: center;
       padding: 5px;
     }
+  }
+
+  .obs {
+    font-style: italic;
   }
 
   @media (min-width: 768px) {

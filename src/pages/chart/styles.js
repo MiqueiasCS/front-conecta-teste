@@ -5,6 +5,10 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
+  > h2 {
+    padding: 25px;
+  }
+
   .info {
     width: 300px;
     display: flex;

@@ -89,6 +89,7 @@ export const PatientList = styled.ul`
   flex-direction: column;
   align-items: center;
   width: 100%;
+  margin-bottom: 50px;
 
   > li {
     height: 40px;
@@ -118,5 +119,6 @@ export const PatientList = styled.ul`
 
   @media (min-width: 1024px) {
     margin: 0 auto;
+    margin-bottom: 50px;
   }
 `;
