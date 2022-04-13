@@ -1,6 +1,12 @@
 ## Atividade 2 - Prontuário
 
-Projeto criado para pôr em prática meus conhecimentos. Nesse projeto é possível logar; ver indicadores da quantidade de clientes que devem ser atendidos e do número de atendimentos do tipo retorno; ver uma lista de clientes que ainda não foram atendidos; acessar a página de prontuário referente a um cliente específico e adicionar informações a esse cliente..
+Projeto criado para pôr em prática meus conhecimentos. Nesse projeto é possível:
+- logar 
+- ver indicador da quantidade de clientes e dos clientes já atendidos 
+- ver indicador do número de atendimentos do tipo retorno 
+- ver uma lista de clientes que ainda não foram atendidos e atualizá-la
+- acessar a página de prontuário referente a um cliente específico 
+- adicionar informações a esse cliente..
 
 ## Tecnologias
 
