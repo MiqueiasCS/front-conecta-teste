@@ -5,8 +5,7 @@ import { IoMdArrowDropright } from "react-icons/io";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
-import { useState, useContext } from "react";
-import { AuthContext } from "../../providers";
+import { useState } from "react";
 
 export const Modal = ({
   patient,
@@ -16,8 +15,6 @@ export const Modal = ({
   empty,
   setEmpty,
 }) => {
-  //   const { patient, setPatient } = useContext(AuthContext);
-
   const [problemList, setProblemList] = useState([]);
   const [problemInputValue, setProblemInputValue] = useState("");
 

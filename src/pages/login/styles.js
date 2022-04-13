@@ -47,15 +47,12 @@ export const Container = styled.div`
   .input-field {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
+
     > label {
-      /* width: 90%; */
       padding-left: 13px;
       color: #7f8589;
       display: flex;
       align-items: center;
-      /* justify-content: space-between; */
       margin-bottom: 5px;
     }
 

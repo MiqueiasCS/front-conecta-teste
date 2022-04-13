@@ -32,9 +32,7 @@ export const Login = () => {
 
   return (
     <Container>
-      {/* <Navheader /> */}
       <div className="header">
-        {/* <img src={logo} alt="logo" className="logo" /> */}
         <p>Faça seu Login aqui!!</p>
       </div>
 
@@ -57,7 +55,6 @@ export const Login = () => {
               />
             </div>
           </div>
-          {/* <p className="text-error">{errors.email?.message}</p> */}
         </div>
 
         <div className="input">
@@ -81,7 +78,6 @@ export const Login = () => {
               />
             </div>
           </div>
-          {/* <p className="text-error">{errors.password?.message}</p> */}
         </div>
         <button type="submit">Entrar</button>
       </form>

@@ -32,7 +32,6 @@ export const Container = styled.header`
       display: flex;
       justify-content: space-between;
       align-items: center;
-      /* width: 100px; */
 
       > svg {
         font-size: 24px;

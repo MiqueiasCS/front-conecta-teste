@@ -11,7 +11,6 @@ export const Dashboard = () => {
   const navigate = useNavigate();
 
   const handleClick = (id) => {
-    console.log(id);
     navigate(`/chart/patient/${id}`);
   };
 
@@ -34,7 +33,6 @@ export const Dashboard = () => {
           <p>Retornos</p>
           <div>{returndUsers.length}</div>
         </div>
-        {/* <div className="attended"></div> */}
       </div>
       <div className="calls-of-the-day">
         <h2>Lista de Pacientes</h2>
